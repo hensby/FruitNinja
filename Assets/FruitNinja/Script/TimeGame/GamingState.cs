@@ -63,15 +63,30 @@ public class GamingState : State
                 destroyTag();
                 gameRule.changeState(GameoverState.Instance);
                 return true;
-            case MessageType.Msg_Scored:
-                scoreControl.score++;
-                if (ShowExitInGame.ifExitShowed == true)
-                {
-                    HideExit();
-                }
-                scoreControl.LastScoreTime = Time.time;
-                Debug.Log("Last score time is: " + scoreControl.LastScoreTime.ToString());
-                return true;
+//             case MessageType.Msg_Scored:
+//                 scoreControl.score++;
+//                 if (ShowExitInGame.ifExitShowed == true)
+//                 {
+//                     HideExit();
+//                 }
+//                 scoreControl.LastScoreTime = Time.time;
+//                 Debug.Log("Last score time is: " + scoreControl.LastScoreTime.ToString());
+//                 return true;
+            case MessageType.Msg_CutApple:
+			scoreControl.AppleScore++;
+			return true;
+		case MessageType.Msg_CutBanana:
+			scoreControl.BananaScore++;
+			return true;
+		case MessageType.Msg_CutBasaha:
+			scoreControl.BasahaScore++;
+			return true;
+		case MessageType.Msg_CutPeach:
+			scoreControl.PeachScore++;
+			return true;
+		case MessageType.Msg_CutSandia:
+			scoreControl.SandiaScore++;
+			 return true;
             case MessageType.Msg_CutBomb:
                 if (Singleton.gameType == EntityType.TimeGamePanelEntity)
                 {
