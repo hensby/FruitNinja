@@ -5,8 +5,8 @@ public enum MessageType{
 	Msg_SwipeLeft,
 	Msg_SwipeRight,
 	Msg_Push,
-    Msg_Left,
-    Msg_Right,
+    	Msg_Left,
+    	Msg_Right,
 	Msg_Space,
 	Msg_Esc,
 	Msg_Tab,
@@ -19,7 +19,12 @@ public enum MessageType{
 	Msg_AlmostOver,
 	Msg_Scored,
 	Msg_CutBomb,
-    Msg_ShowExitInGame,
-    Msg_ExitInGame, 
-	Msg_Null
+    	Msg_ShowExitInGame,
+    	Msg_ExitInGame, 
+	Msg_Null，
+	Msg_CutApple,
+	Msg_CutBanana,
+	Msg_CutBasaha,
+	Msg_CutPeach,
+	Msg_CutSandia,
 }
