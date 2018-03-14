@@ -48,10 +48,35 @@ public class DetectIfCut : MonoBehaviour {
 					MessageDispatcher.Instance.dispatchMessage(0.0f, Singleton.gameType, MessageType.Msg_CutBomb, getPos (), 0 );
 					Destroy (gameObject);
 				} else {
-					MessageDispatcher.Instance.dispatchMessage (0.0f, Singleton.gameType, MessageType.Msg_Scored, new Vector2(0,0), 0);
-					createRightLeftFruit ();
-					playMusic ();
-					Destroy (gameObject);	
+// 					MessageDispatcher.Instance.dispatchMessage (0.0f, Singleton.gameType, MessageType.Msg_Scored, new Vector2(0,0), 0);
+// 					createRightLeftFruit ();
+// 					playMusic ();
+// 					Destroy (gameObject);
+					if (fruitType == Contant.Type_Apple) {
+						MessageDispatcher.Instance.dispatchMessage (0.0f, Singleton.gameType, MessageType.Msg_CutApple, new Vector2(0,0), 0);
+						createRightLeftFruit ();
+						playMusic ();
+						Destroy (gameObject);}
+					else if (fruitType == Contant.Type_Banana) {
+						MessageDispatcher.Instance.dispatchMessage (0.0f, Singleton.gameType, MessageType.Msg_CutBanana, new Vector2(0,0), 0);
+						createRightLeftFruit ();
+						playMusic ();
+						Destroy (gameObject);}	
+					else if (fruitType == Contant.Type_Basaha) {
+						MessageDispatcher.Instance.dispatchMessage (0.0f, Singleton.gameType, MessageType.Msg_CutBasaha, new Vector2(0,0), 0);
+						createRightLeftFruit ();
+						playMusic ();
+						Destroy (gameObject);}	
+					else if (fruitType == Contant.Type_Peach) {
+						MessageDispatcher.Instance.dispatchMessage (0.0f, Singleton.gameType, MessageType.Msg_CutPeach, new Vector2(0,0), 0);
+						createRightLeftFruit ();
+						playMusic ();
+						Destroy (gameObject);}	
+					else if (fruitType == Contant.Type_Sandia) {
+						MessageDispatcher.Instance.dispatchMessage (0.0f, Singleton.gameType, MessageType.Msg_CutSandia, new Vector2(0,0), 0);
+						createRightLeftFruit ();
+						playMusic ();
+						Destroy (gameObject);}	
 				}
 			}
 		} else if (other.tag == "Fruit") {
