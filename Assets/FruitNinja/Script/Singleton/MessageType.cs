@@ -21,5 +21,10 @@ public enum MessageType{
 	Msg_CutBomb,
     Msg_ShowExitInGame,
     Msg_ExitInGame, 
-	Msg_Null
+	Msg_Null,
+	Msg_CutApple,
+	Msg_CutBanana,
+	Msg_CutBasaha,
+	Msg_CutPeach,
+	Msg_CutSandia
 }
