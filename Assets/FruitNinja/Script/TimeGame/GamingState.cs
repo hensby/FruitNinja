@@ -71,21 +71,51 @@ public class GamingState : State
 //                 }
 //                 scoreControl.LastScoreTime = Time.time;
 //                 Debug.Log("Last score time is: " + scoreControl.LastScoreTime.ToString());
-//                 return true;
+//                return true;
             case MessageType.Msg_CutApple:
 			scoreControl.AppleScore++;
+			if (ShowExitInGame.ifExitShowed == true)
+                {
+                    HideExit();
+                }
+                scoreControl.LastScoreTime = Time.time;
+                Debug.Log("Last score time is: " + scoreControl.LastScoreTime.ToString());
 			return true;
 		case MessageType.Msg_CutBanana:
 			scoreControl.BananaScore++;
+			if (ShowExitInGame.ifExitShowed == true)
+                {
+                    HideExit();
+                }
+                scoreControl.LastScoreTime = Time.time;
+                Debug.Log("Last score time is: " + scoreControl.LastScoreTime.ToString());
 			return true;
 		case MessageType.Msg_CutBasaha:
 			scoreControl.BasahaScore++;
+			if (ShowExitInGame.ifExitShowed == true)
+                {
+                    HideExit();
+                }
+                scoreControl.LastScoreTime = Time.time;
+                Debug.Log("Last score time is: " + scoreControl.LastScoreTime.ToString());
 			return true;
 		case MessageType.Msg_CutPeach:
 			scoreControl.PeachScore++;
+			if (ShowExitInGame.ifExitShowed == true)
+                {
+                    HideExit();
+                }
+                scoreControl.LastScoreTime = Time.time;
+                Debug.Log("Last score time is: " + scoreControl.LastScoreTime.ToString());
 			return true;
 		case MessageType.Msg_CutSandia:
 			scoreControl.SandiaScore++;
+			if (ShowExitInGame.ifExitShowed == true)
+                {
+                    HideExit();
+                }
+                scoreControl.LastScoreTime = Time.time;
+                Debug.Log("Last score time is: " + scoreControl.LastScoreTime.ToString());
 			 return true;
             case MessageType.Msg_CutBomb:
                 if (Singleton.gameType == EntityType.TimeGamePanelEntity)
